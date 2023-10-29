@@ -95,24 +95,11 @@ colorization results; 2) in-context controllable colorization that edits the col
     <h2>Method</h2>  
   
     <figure>  
-        <img src="assets/images/framework-v4-1.png" alt="Image description">  
-        <figcaption>Framework of Diffcolor. DiffColor mainly contains two stages: 1) colorization with generative color prior that produces accurate and vivid  
-colorization results; 2) in-context controllable colorization that edits the color of the first-stage output in a way that satisfies the target text prompt.</figcaption>  
+        <img src="assets/images/architecture_new.png" alt="Image description">  
+        <figcaption>Overall pipeline of the proposed VividTalker. Our method is composed of two core components: 1) the factor disentanglement module utilizes two VQ-VAE models to encode the head pose and mouth movement into separate discrete latent spaces; 2) the detail enrichment module employs a window-based Transformer to predict motion dynamics (including facial details) over the learned discrete latent space, given an audio signal.
+        </figcaption>  
     </figure>  
   
-    <h2>Colorization</h2>  
-  
-    <figure>  
-        <img src="assets/images/new_main-1.png" alt="Image description">  
-        <figcaption>Different color prompts applied to the same gray image.</figcaption>  
-    </figure>  
-  
-    <h2>Comparison</h2>  
-  
-    <figure>  
-        <img src="assets/images/new_prompt-1.png" alt="Image description">  
-        <figcaption>Comparison with other existing text-conditioned image colorization method.</figcaption>  
-    </figure>  
-  
+
 </body>  
 </html>  
