@@ -82,24 +82,25 @@ colorization results; 2) in-context controllable colorization that edits the col
             text-align: center;  
             margin-bottom: 20px;  
         }  
-         .video-container {
+        /* 设置视频容器 */
+        .video-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            margin: 20px;
+            justify-content: space-around;
         }
 
-        video {
-            width: 30%; /* 设置视频宽度 */
+        /* 设置每个视频块 */
+        .video-block {
+            width: 30%; /* 调整视频块的宽度，以适应屏幕大小 */
             margin-bottom: 20px;
         }
-      .text-overlay {
-            position: absolute;
-            top: 50%; /* 上方为50%的位置 */
-            left: 50%; /* 左方为50%的位置 */
-            transform: translate(-50%, -50%); /* 居中定位 */
-            color: white;
-            font-size: 24px;
+
+        /* 设置标题样式 */
+        .video-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+            text-align: center;
         }
       
     </style>  
@@ -121,64 +122,36 @@ colorization results; 2) in-context controllable colorization that edits the col
     </figure>  
   <h2>Comparison with baselines and real sample</h2>
 
- <div class="video-container">
-    <!-- 第一排 -->
-    <video controls>
-        <source src="meshtalk.mp4" type="video/mp4">
-        MeshTalk
-        <div class="text-overlay">
-          MeshTalk
-        </div>
-    </video>
-   
-
-    <video controls>
-        <source src="faceformer.mp4" type="video/mp4">
-        FaceFormer
-        <div class="text-overlay">
-        FaceFormer
-        </div>
-    </video>
-  
-    
-    <video controls>
-        <source src="codetalker.mp4" type="video/mp4">
-        CodeTalker
-        <div class="text-overlay">
-          CodeTalker
-        </div>
-    </video>
-   
-
-    <!-- 第二排 -->
-    <video controls>
-       <div class="video-block">
-          <source src="sadtalker.mp4" type="video/mp4">
-          SadTalker
-         <div class="text-overlay">
-          SadTalker
-          </div>
-    </video>
-   
-
-    <video controls>
-        <source src="vividtalker.mp4" type="video/mp4">
-        VividTalker(Ours)
-        <div class="text-overlay">
-        VividTalker(Ours)
-        </div>
-    </video>
-   
-
-    <video controls>
-        <source src="realsample.mp4" type="video/mp4">
-        RealSample
-      <div class="text-overlay">
-        RealSample
-      </div>
-    </video>
-   
+<!-- 第一排视频 -->
+<div class="video-container">
+    <div class="video-block">
+        <iframe width="100%" height="200" src="meshtalk.mp4" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">MeshTalk</div>
+    </div>
+    <div class="video-block">
+        <iframe width="100%" height="200" src="faceformer.mp4" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">FaceFormer </div>
+    </div>
+    <div class="video-block">
+        <iframe width="100%" height="200" src="codetalker.mp4" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">CodeTalker</div>
+    </div>
 </div>
 
+<!-- 第二排视频 -->
+<div class="video-container">
+    <div class="video-block">
+        <iframe width="100%" height="200" src="sadtalker.mp4" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">SadTalker</div>
+    </div>
+    <div class="video-block">
+        <iframe width="100%" height="200" src="vividtalker.mp4" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">VividTalker</div>
+    </div>
+    <div class="video-block">
+        <iframe width="100%" height="200" src="realsample.mp4" frameborder="0" allowfullscreen></iframe>
+        <div class="video-title">RealSample</div>
+    </div>
+</div>
 </body>  
 </html>  
