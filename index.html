@@ -93,6 +93,14 @@ colorization results; 2) in-context controllable colorization that edits the col
             width: 30%; /* 设置视频宽度 */
             margin-bottom: 20px;
         }
+      .text-overlay {
+            position: absolute;
+            top: 50%; /* 上方为50%的位置 */
+            left: 50%; /* 左方为50%的位置 */
+            transform: translate(-50%, -50%); /* 居中定位 */
+            color: white;
+            font-size: 24px;
+        }
       
     </style>  
 </head>  
@@ -119,32 +127,50 @@ colorization results; 2) in-context controllable colorization that edits the col
         <source src="meshtalk.mp4" type="video/mp4">
         MeshTalk
     </video>
+   <div class="text-overlay">
+        MeshTalk
+    </div>
 
     <video controls>
         <source src="faceformer.mp4" type="video/mp4">
         FaceFormer
     </video>
-
+   <div class="text-overlay">
+        FaceFormer
+    </div>
+    
     <video controls>
         <source src="codetalker.mp4" type="video/mp4">
         CodeTalker
     </video>
+   <div class="text-overlay">
+        CodeTalker
+    </div>
 
     <!-- 第二排 -->
     <video controls>
         <source src="sadtalker.mp4" type="video/mp4">
         SadTalker
     </video>
+   <div class="text-overlay">
+        SadTalker
+    </div>
 
     <video controls>
         <source src="vividtalker.mp4" type="video/mp4">
         VividTalker(Ours)
     </video>
+   <div class="text-overlay">
+        VividTalker(Ours)
+    </div>
 
     <video controls>
         <source src="realsample.mp4" type="video/mp4">
         RealSample
     </video>
+   <div class="text-overlay">
+        RealSample
+    </div>
 </div>
 
 </body>  
